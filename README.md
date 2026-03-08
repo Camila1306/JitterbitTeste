@@ -143,3 +143,25 @@ curl --location 'http://localhost:3000/order' \
   ]
 }'
 ```
+
+## Release checklist
+
+Antes de publicar ou entregar, valide os itens abaixo:
+
+- Banco PostgreSQL em execucao e acessivel na porta configurada.
+- Banco `orders_db` criado e `sql/schema.sql` aplicado com sucesso.
+- Arquivo `.env` preenchido com credenciais corretas.
+- Dependencias instaladas sem erro com `npm install`.
+- API iniciando com `npm start` em `http://localhost:3000`.
+- Swagger acessivel em `http://localhost:3000/docs`.
+- CRUD testado:
+  - `POST /order` cria pedido e retorna `201`.
+  - `GET /order/:orderId` retorna `200` para pedido existente.
+  - `GET /order/list` retorna `200` com lista de pedidos.
+  - `PUT /order/:orderId` atualiza pedido e retorna `200`.
+  - `DELETE /order/:orderId` remove pedido e retorna `204`.
+- Validacoes de erro testadas (`400`, `404`, `409`, `500`).
+- Fluxo JWT testado quando `AUTH_REQUIRED=true`:
+  - `POST /auth/login` gera token valido.
+  - Endpoints de `/order` exigem `Authorization: Bearer <token>`.
+- Commit final enviado para `main` no GitHub.
