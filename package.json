@@ -1,0 +1,31 @@
+{
+  "name": "orders-api",
+  "version": "1.0.0",
+  "description": "Simple Node.js API for order management with PostgreSQL",
+  "main": "project.js",
+  "scripts": {
+    "start": "node project.js",
+    "dev": "nodemon project.js",
+    "check": "node --check project.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "postgresql",
+    "orders",
+    "api"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "pg": "^8.13.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
