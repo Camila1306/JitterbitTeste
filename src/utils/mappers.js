@@ -8,7 +8,6 @@ function normalizeOrderId(numeroPedido) {
     return null;
   }
 
-  // Remove sufixos comuns de parcela/lote, por exemplo: "-01".
   return trimmed.split("-")[0];
 }
 
